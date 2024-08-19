@@ -1,0 +1,74 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente que elegiste */
+    background-color: #f7c848; /* Fondo de la página */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Contenedor de los menús */
+.menu-container {
+    position: relative; /* Asegura que el submenú se posicione en relación al contenedor */
+    margin: 10px 0;
+}
+
+/* Estilos para el menú */
+.menu {
+    background-color: #e060c0; /* Fondo de los botones */
+    color: black; /* Color del texto de los botones */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Asegura que el botón esté por debajo del submenú */
+}
+
+/* Cambio de color al pasar el cursor */
+.menu:hover {
+    background-color: #a5478e;
+}
+
+/* Estilos para los submenús */
+.submenu {
+    display: none;
+    position: absolute; /* Permite posicionar el submenú respecto al contenedor */
+    top: 100%; /* Coloca el submenú justo debajo del botón */
+    left: 50%; /* Posiciona el submenú centrado horizontalmente respecto al contenedor */
+    transform: translateX(-50%); /* Ajusta el submenú para que esté centrado */
+    background-color: #eca9e1; /* Fondo del submenú */
+    color: #000000; /* Color del texto */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #58224f; /* Borde del submenú */
+    width: 400px; /* Ancho fijo del submenú */
+    max-width: 300%; /* No exceder el ancho del contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    z-index: 1000; /* Asegura que el submenú esté encima de otros elementos */
+}
+
+/* Submenú activo */
+.submenu.active {
+    display: block;
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #a83795;
+    background: none;
+    border: none;
+}
+
+.close:hover {
+    color: #58224f;
+}
